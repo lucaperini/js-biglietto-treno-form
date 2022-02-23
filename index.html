@@ -18,15 +18,14 @@
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
 
-    
-
 </head>
     <title>Prenota il tuo biglietto</title>
 </head>
 <body>
     <main>
-        <div class="container">
-            <div class="row text-center">
+        <h2 class="text-uppercase pt-5 text-center">calcola il prezzo del tuo biglietto</h2>
+        <div class="container pt-5">
+            <div class="row reservation text-center">
                 <div class="col-4">
                     <h3>Nome e Cognome</h3>
                     <input id="name-surname" type="text">
@@ -38,36 +37,37 @@
                 <div class="col-4">
                     <h3>Fascia di età</h3>
                     <select id="age-range">
-                        <option value="1">Minorenne</option>
-                        <option value="2">Over 65</option>
+                        <option value="1">Normale</option>
+                        <option value="2">Minorenne</option>
+                        <option value="3">Over 65</option>
                     </select>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 p-5 text-center">
-                    <button class="btn bg-primary fw-bold text-white px-5">Genera</button>
-                    <button class="btn bg-danger fw-bold text-white px-5">Annulla</button>
+                <div class="col-12 p-5 text-center mx-2">
+                    <button id="generate-button" class="btn bg-primary fw-bold text-white px-5 ">Genera</button>
+                    <button id="reset-button" class="btn bg-danger fw-bold text-white px-5 ">Annulla</button>
                 </div>
             </div>
             <section>
-                <div class="container d-none">
+                <div class="container d-none ">
                     <div class="row test text-white">
-                        <div class="col-3 bg-primary">
-                            <h3>Nome Passeggero</h3>
-                            <p>John Snow</p>
+                        <div class="col-3 passenger pt-5">
+                            <h4 class="text-center bg-white text-dark rounded align-bottom">Nome Passeggero</h4>
+                            <p class="px-4 fs-4 customer rounded fw-bold bg-white text-dark text-center" id="customer-name">John Snow</p>
                         </div>
-                        <div class="col-9 bg-dark pt-5 text-center">
+                        <div class="col-9 pt-5 details bg-dark text-center">
                             <div class="col d-inline-block px-4 ">
                                 <h3>Offerta</h3>
                                 <p id="ticket-category">Biglietto Standard</p>
                             </div>
                             <div class="col d-inline-block px-4">
                                 <h3>Carrozza</h3>
-                                <p id="vecture-code">6</p>
+                                <p>6</p>
                             </div>
                             <div class="col d-inline-block px-4">
                                 <h3>Codice CP</h3>
-                                <p id="cp-code">928178</p>
+                                <p>928178</p>
                             </div>
                             <div class="col d-inline-block px-4">
                                 <h3>Costo biglietto</h3>
